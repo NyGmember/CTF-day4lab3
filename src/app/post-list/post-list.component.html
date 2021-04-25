@@ -1,0 +1,21 @@
+<form [formGroup]="form">
+    <div>
+        <input type="number" formControlName="userId">
+    </div>
+    <div>
+        <input type="text" formControlName="title">
+    </div>
+    <div>
+        <input type="text" formControlName="body">
+    </div>
+    <div>
+        <button (click)="addPost()">Post</button>
+    </div>
+</form>
+
+<div *ngFor="let post of posts" style="border: 1px solid gray; margin: 4px; padding: 4px;">
+    <h4>User Id: #{{ post.userId }}</h4>
+    <span>Post Id: {{ post.id }}</span>
+    <span>Title: {{ post.title }}</span>
+    <span>Body: {{ post.body }}</span>
+</div>
